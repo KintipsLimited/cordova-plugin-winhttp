@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-winhttp" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugins-winhttp</name>
+    
+  <!-- <engines>
+    <engine name="cordova" version=">=3.3.0" />
+  </engines> -->
+
+   <js-module src="www/http.js" name="cordova-plugins-winhttp">
+      <clobbers target="cordova.plugins.winhttp"/>
+   </js-module>
+
+    <platform name="windows">
+        <js-module name="winHttp" src="src/windows/http_proxy.js">
+            <runs target="" />
+        </js-module>
+        <framework src="src/windows/WinHttp.winmd" target-dir="x64" arch="x64" custom="true"/>
+  </platform>
+</plugin>

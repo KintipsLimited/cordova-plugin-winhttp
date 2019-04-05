@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-winhttp",
+  "version": "1.0.0",
+  "description": "cordova-plugin-winhttp",
+  "cordova": {
+    "id": "cordova-plugin-winhttp",
+    "platforms": [
+      "windows"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-windows"
+  ],
+  "author": "John Michael James",
+  "license": "ISC"
+}
