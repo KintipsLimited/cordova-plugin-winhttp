@@ -1,11 +1,21 @@
 cordova.commandProxy.add("getOdds", {
-  uwp: async function(successCallback, errorCallback, url) {
+  uwp: async function (successCallback, errorCallback, url) {
     try {
       var service = new WinHttp.Service();
       var s = await service.getOdds(url);
-      successCallback(JSON.parse(s));
+      var successObject = {
+        data: s,
+        status: 200,
+        url: url
+      }
+      successCallback(successObject);
     } catch (e) {
-      errorCallback(0);
+      var errorObject = {
+        data: e,
+        status: 500,
+        url: url
+      }
+      errorCallback(errorObject);
     }
   }
 });
