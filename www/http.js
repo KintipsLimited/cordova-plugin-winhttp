@@ -1,7 +1,8 @@
 var exec = require("cordova/exec");
 
-exports.get = function(url) {
+exports.request = function(method, url) {
   return new Promise((resolve, error) => {
-    exec(resolve, error, "getOdds", "uwp", url);
+    console.log(method, url)
+    exec(resolve, error, "request", "uwp", [method, url]);
   });
 };
